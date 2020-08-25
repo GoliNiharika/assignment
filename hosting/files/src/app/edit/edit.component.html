@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <span><a routerLink="/"> VisiRam Solutions</a></span>
+  </mat-toolbar>
+<br><br><br>
+<marquee direction="left">You can Update the Name and Description Of current Project</marquee>
+<br><br><br>
+<mat-card>
+  <form [formGroup]="form" (submit)="onSavepost()" >
+  <mat-form-field>
+    <input matInput type="text" required formControlName="title" placeholder="Name of the project">
+  <mat-error *ngIf="form.get('title').invalid">enter a name</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput
+     rows="10"
+     name="content"
+     required
+     formControlName="content"
+     placeholder="Project Content"
+     ></textarea>
+     <mat-error *ngIf="form.get('content').invalid">enter the content</mat-error>
+</mat-form-field>
+
+<br>
+<button color="primary"
+   mat-raised-button
+   type="submit">Save
+</button>
+</form>
+</mat-card>

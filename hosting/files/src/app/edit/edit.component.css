@@ -1,0 +1,10 @@
+mat-form-field, textarea{
+  width: 100%;
+}
+input[type="file"]{
+  visibility: hidden;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
